@@ -146,7 +146,7 @@ class DnsRecordBase
             }
 
             # Returns all properties not in desires state, or $null if all properties are in desired state
-            $propertiesNotInDesiredState = Compare-DscParameterState -CurrentValues $currentState -DesiredValues $desiredState -Properties $desiredState.Keys -Verbose
+            $propertiesNotInDesiredState = Compare-DscParameterState -CurrentValues $currentState -DesiredValues $desiredState -Properties $desiredState.Keys
 
             if ($propertiesNotInDesiredState)
             {
@@ -166,7 +166,7 @@ class DnsRecordBase
 
         if ($isInDesiredState)
         {
-            Write-Verbose -Message $script:localizedDataDnsRecordBase.ObjectInDesiredState -Verbose
+            Write-Verbose -Message $script:localizedDataDnsRecordBase.ObjectInDesiredState
         }
         else
         {
