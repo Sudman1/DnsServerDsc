@@ -145,7 +145,7 @@ class DnsRecordBase
                 }
             }
 
-            # Returns all properties not in desires state, or $null if all properties are in desired state
+            # Returns all enforced properties not in desires state, or $null if all enforced properties are in desired state
             $propertiesNotInDesiredState = Compare-DscParameterState -CurrentValues $currentState -DesiredValues $desiredState -Properties $desiredState.Keys
 
             if ($propertiesNotInDesiredState)
